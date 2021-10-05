@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleCalculator.MainPage">
+
+    <!-- Background -->
+    <StackLayout HorizontalOptions="Center" 
+                 VerticalOptions="Center"
+                 BackgroundColor="Gray">
+
+        <!-- Enter Weight Area -->
+        <StackLayout Orientation="Horizontal"
+                     BackgroundColor="Blue">
+            
+            <Label Text="Your Weight: "/>
+            <Entry x:Name="EntryWeight"
+                   Placeholder="000"/>
+            <Label Text="Kg"/>
+            
+        </StackLayout>
+
+        <!-- Enter Height Area -->
+        <StackLayout Orientation="Horizontal"
+                     BackgroundColor="Yellow">
+            
+            <Label Text="Your Height: "/>
+            <Entry x:Name="EntryHeight" 
+                   Placeholder="000"/>
+            <Label Text="M"/>
+            
+        </StackLayout>
+        
+        <!-- Button -->
+        <Button x:Name="BtnCalculate" 
+                Text="Calculate BMI"
+                HorizontalOptions="Center"
+                Clicked="BtnCalculate_Clicked"/>
+                <!-- Only Take up space needed -->
+
+        <Label x:Name="LblBMIValue" 
+               Text="Your BMI is: " />
+
+    </StackLayout>
+</ContentPage>
